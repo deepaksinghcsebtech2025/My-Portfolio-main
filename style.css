@@ -171,7 +171,7 @@ html {
   margin: 0; /* Reset default margin */
   padding: 20px 0; /* Adds space above and below the paragraph */
   font-size: 18px; /* Optional: adjust font size */
-  color: white; /* Optional: adjust text color */
+  color: white /* Optional: adjust text color */
 }
 
 
