@@ -73,6 +73,7 @@ html {
 }
 
 
+
 /* Menu Button Styling */
 .menu-btn {
   color: white;
@@ -144,6 +145,7 @@ html {
 .home .home-content .text-3 span {
   font-weight: 500;
   color: crimson;
+  
 }
 .home .home-content a {
   display: inline-block;
@@ -164,6 +166,14 @@ html {
   color: white;
   background: #000;
 }
+.hire-info p {
+  line-height: 1.8; /* Adjusts space between lines of text */
+  margin: 0; /* Reset default margin */
+  padding: 20px 0; /* Adds space above and below the paragraph */
+  font-size: 18px; /* Optional: adjust font size */
+  color: white; /* Optional: adjust text color */
+}
+
 
 /* all similar content styling code */
 section {
@@ -233,15 +243,17 @@ section .title::after {
   width: 45%;
 }
 .about .about-content .left img {
-  height: 400px;
+  height: 550px;
   width: 400px;
   object-fit: cover;
   border-radius: 40px 0px 40px 0px;
 }
 .about .about-content .right {
   width: 55%;
-}
+} 
+
 .about .about-content .right .text {
+  
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
