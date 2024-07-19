@@ -424,7 +424,7 @@ section .title::after {
 .projects .title::after {
   content: "check my work";
 }
-.projects .carousel .card {
+/* .projects .carousel .card {
   background: #222;
   border-radius: 10px;
   padding: 25px 20px;
@@ -460,7 +460,108 @@ section .title::after {
 }
 .projects .carousel .card:hover img {
   border-color: #fff;
+} */
+
+
+/*new card code */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Section styling */
+.projects {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+/* Card container */
+.projects .carousel .card {
+    background: linear-gradient(135deg, #3f5efb, #fc466b); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the card */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+    max-width: 320px; /* Maximum width of the card */
+    margin: 0 auto; /* Center the card */
+}
+
+.projects .carousel .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+}
+
+.projects .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.projects .carousel .card .project-title {
+    font-size: 1.2em; /* Fixed font size for title */
+    font-weight: 700; /* Bold text for emphasis */
+    color: #fff; /* White color for text */
+    margin: 10px 0; /* Margin around the title */
+}
+
+.projects .carousel .card .project-tech {
+    font-size: 1em; /* Fixed font size for tech stack */
+    color: #ddd; /* Light color for secondary text */
+    margin-top: 5px; /* Margin above the tech stack */
+}
+
+.projects .carousel .card img {
+    height: 200px; /* Fixed height for images */
+    width: 100%; /* Full width of the card */
+    object-fit: cover; /* Cover the image area */
+    border-radius: 15px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects .carousel .card {
+        max-width: 280px; /* Adjust max width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects .carousel .card {
+        max-width: 100%; /* Full width for small screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .projects .carousel .card .project-title {
+        font-size: 1.1em; /* Adjust font size for smaller screens */
+    }
+
+    .projects .carousel .card .project-tech {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .projects .carousel .card img {
+        height: 150px; /* Adjust height for very small screens */
+    }
+}
+
+
+
+/*add my project css 3d motion images code  */
+.projects {
+  background: url('./images/Background images .png') no-repeat center center fixed; /* Fixed background image for the project section */
+  background-size: cover; /* Cover the entire section */
+  position: relative; /* Ensure proper positioning of child elements */
+  overflow: hidden; /* Hide any overflow */
+}
+
+
+
+
 .owl-dots {
   text-align: center;
   margin-top: 20px;
