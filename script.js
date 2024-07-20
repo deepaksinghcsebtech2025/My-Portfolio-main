@@ -6,7 +6,15 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("sticky");
     }
-    // Scroll down sticky navbar script end
+    // Optimize Scroll Events:
+    let debounceTimer;
+$(window).scroll(function () {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    // Your scroll event logic here
+  }, 100); // Adjust the delay as needed
+});
+
 
     // Scroll up Button script start
     if (this.scrollY > 500) {
@@ -82,4 +90,25 @@ $(document).ready(function () {
     },
   });
   // owl carousel script end
+  // Initialize EmailJS with your user ID
+emailjs.init("YOUR_USER_ID"); // Replace YOUR_USER_ID with your actual EmailJS user ID
+
+// Function to handle form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const formData = new FormData(this);
+
+  // Send email using EmailJS
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    .then(function(response) {
+      console.log('Success:', response);
+      alert('Your message has been sent successfully!');
+    }, function(error) {
+      console.error('Error:', error);
+      alert('There was an error sending your message. Please try again.');
+    });
+});
+
 });

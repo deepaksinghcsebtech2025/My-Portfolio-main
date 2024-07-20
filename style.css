@@ -611,6 +611,8 @@ section .title::after {
 }
 .contact .contact-content .left .icons {
   margin: 10px 0;
+  color: red;
+  
 }
 .contact .contact-content .row {
   display: flex;
@@ -620,6 +622,7 @@ section .title::after {
 .contact .contact-content .row i {
   font-size: 25px;
   color: crimson;
+  
 }
 .contact .contact-content .row .email-icon {
   margin-left: -7px;
@@ -639,6 +642,7 @@ section .title::after {
   padding-bottom: 10px;
   font-weight: 600;
 }
+
 .contact .right form .fields {
   display: flex;
 }
