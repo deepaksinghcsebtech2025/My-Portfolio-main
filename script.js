@@ -91,18 +91,20 @@ $(window).scroll(function () {
   });
   // owl carousel script end
   // Initialize EmailJS with your user ID
-emailjs.init("YOUR_USER_ID"); // Replace YOUR_USER_ID with your actual EmailJS user ID
+emailjs.init("ByuYpQFBN05opT-FO"); // Replace YOUR_USER_ID with your actual EmailJS user ID
 
 // Function to handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
   // Get form data
-  const formData = new FormData(this);
+  // const formData = new FormData(this);
+ 
 
   // Send email using EmailJS
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+  emailjs.sendForm('service_2uyicni', 'template_ahhj90f', this)
     .then(function(response) {
+      // console.log(formData)
       console.log('Success:', response);
       alert('Your message has been sent successfully!');
     }, function(error) {
